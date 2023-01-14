@@ -187,6 +187,12 @@ main {
   align-items: center;
   width: 100%;
   margin-bottom: 0.5rem;
+
+  background: var(--clr-neutral-700);
+  height: 1.15rem;
+  padding: 2px;
+  border: none;
+  border-radius: 2rem;
 }
 
 .gauge::-webkit-meter-bar {
@@ -197,6 +203,11 @@ main {
 }
 
 .gauge::-webkit-meter-optimum-value {
+  background-image: var(--clr-gradient-primary);
+  border-radius: 1rem;
+}
+
+.gauge:-moz-meter-optimum::-moz-meter-bar {
   background-image: var(--clr-gradient-primary);
   border-radius: 1rem;
 }

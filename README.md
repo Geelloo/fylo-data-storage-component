@@ -50,6 +50,8 @@ Positionning of the ball in the gauge was also tricky, I decided to position it 
 
 The bubble was also new to me, not so much the positioning but the little notch in the desktop version.
 
+PS: Unfortunately pseudo elements on the \<meter\> tag are not supported in Firefox
+
 ## Author
 
 - Frontend Mentor - [@Geelloo](https://www.frontendmentor.io/profile/Geelloo)
