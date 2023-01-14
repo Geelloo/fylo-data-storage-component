@@ -26,36 +26,48 @@
     <title>Frontend Mentor | Fylo data storage component</title>
   </head>
   <body>
-    <nav class="nav">
-      <img src="images/logo.svg" alt="Fylo Logo" class="nav__logo" />
-      <img
-        src="images/icon-document.svg"
-        alt="Document Icon"
-        class="nav__file"
-      />
-      <img src="images/icon-folder.svg" alt="Folder Icon" class="nav__folder" />
-      <img src="images/icon-upload.svg" alt="Upload Icon" class="nav__upload" />
-    </nav>
-
     <main>
+      <h1 class="sr-only">Fylo Storage Component</h1>
+
       <section class="storage">
-        <div class="storage__text">You've used 815 GB of your storage</div>
-        <div class="storage__bar"></div>
-        <div class="storage__bar__labels">
-          <p>0 GB</p>
-          <p>1000 GB</p>
+        <div class="storage__controls">
+          <img class="logo" src="images/logo.svg" alt="Fylo Logo" />
+          <ul class="buttons" role="list" aria-label="Storage controls">
+            <li>
+              <button aria-label="Document">
+                <img src="images/icon-document.svg" alt="" aria-hidden="true" />
+              </button>
+            </li>
+            <li>
+              <button aria-label="Folder">
+                <img src="images/icon-folder.svg" alt="" aria-hidden="true" />
+              </button>
+            </li>
+            <li>
+              <button aria-label="Upload">
+                <img src="images/icon-upload.svg" alt="" aria-hidden="true" />
+              </button>
+            </li>
+          </ul>
         </div>
-        <div class="storage__left">185 GB Left</div>
+
+        <div class="storage__display">
+          <p class="data-text">You've used <b>185 GB</b> of your storage</p>
+          <meter
+            class="gauge"
+            id="gauge"
+            value="815"
+            min="0"
+            max="1000"
+          ></meter>
+          <label class="gauge-labels" for="gauge">
+            <span>0 gb</span><span>1000 gb</span>
+          </label>
+          <div class="data-bubble">
+            <p class="data-bubble__text"><span>185</span>gb left</p>
+          </div>
+        </div>
       </section>
     </main>
-
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </footer>
   </body>
 </html>

@@ -5,14 +5,16 @@
     hsl(335, 100%, 65%)
   );
 
+  --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(243, 100%, 93%);
   --clr-neutral-400: hsl(229, 7%, 55%);
   --clr-neutral-600: hsl(228, 56%, 26%);
+  --clr-neutral-700: hsl(227, 57%, 19%);
   --clr-neutral-800: hsl(229, 57%, 11%);
 
   --ff-regular: "Raleway", sans-serif;
 
-  --fs-regular: 0.875;
+  --fs-regular: 0.875rem;
 
   --fw-regular: 400;
   --fw-bold: 700;
@@ -95,11 +97,154 @@ select {
   }
 }
 
-/* Frontend Mentor Footer Styles */
-.attribution {
-  font-size: 11px;
-  text-align: center;
+/* Utilities */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+/* Custom CSS */
+
+body {
+  background: url(images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  color: var(--clr-neutral-200);
+  font-family: var(--ff-regular);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-regular);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.storage {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+
+/* Storage controls (Top part) */
+.storage__controls {
+  background: var(--clr-neutral-600);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  border-top-right-radius: 6rem;
+}
+
+.storage__controls .logo {
+  margin-bottom: 2rem;
+}
+
+.storage__controls .buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.storage__controls .buttons button {
+  background: var(--clr-neutral-800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* Storage display (Bottom part) */
+.storage__display {
+  position: relative;
+  background-color: var(--clr-neutral-600);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.25rem;
+  border-radius: 1rem;
+}
+
+.storage__display .data-text {
+  margin-bottom: 1rem;
+}
+
+.gauge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.gauge::-webkit-meter-bar {
+  background: var(--clr-neutral-700);
+  height: 1.15rem;
+  padding: 2px;
+  border: none;
+}
+
+.gauge::-webkit-meter-optimum-value {
+  background-image: var(--clr-gradient-primary);
+  border-radius: 1rem;
+}
+
+.storage__display .gauge-labels {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: var(--fw-bold);
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+/* Gauge ball */
+.storage__display .gauge::after {
+  content: "";
+  background: #fff;
+  height: 0.625rem;
+  width: 0.625rem;
+  position: absolute;
+  left: calc(81.5% - 13px);
+  border-radius: 50%;
+}
+
+.storage__display .data-bubble {
+  position: absolute;
+  top: 78%;
+  background: #fff;
+  color: var(--clr-neutral-800);
+  font-weight: var(--fw-bold);
+  padding: 1rem 1.75rem;
+  border-radius: 0.5rem;
+}
+
+.storage__display .data-bubble__text {
+  color: var(--clr-neutral-400);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.storage__display .data-bubble__text span {
+  color: var(--clr-neutral-800);
+  font-size: 2.5rem;
+  font-weight: var(--fw-bold);
+  line-height: 1;
 }
