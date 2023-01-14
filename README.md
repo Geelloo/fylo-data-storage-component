@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/fylo-data-storage-component-58XvaKQhqi](https://www.frontendmentor.io/solutions/fylo-data-storage-component-58XvaKQhqi)
+- Live Site URL: [https://geelloo.github.io/fylo-data-storage-component/](https://geelloo.github.io/fylo-data-storage-component/)
 
 ## My process
 
