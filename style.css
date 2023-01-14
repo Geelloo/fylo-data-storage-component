@@ -248,3 +248,47 @@ main {
   font-weight: var(--fw-bold);
   line-height: 1;
 }
+
+@media (min-width: 910px) {
+  body {
+    background: url(images/bg-desktop.png);
+    background-color: var(--clr-neutral-800);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  .storage {
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    gap: 2rem;
+  }
+
+  .storage__controls {
+    width: 22rem;
+  }
+
+  .storage__display {
+    width: 34rem;
+  }
+
+  .storage__display .data-text {
+    align-self: start;
+  }
+  .storage__display .data-bubble {
+    top: -3rem;
+    left: 20rem;
+  }
+
+  .storage__display .data-bubble::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+  }
+}
